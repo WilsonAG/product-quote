@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Product Quote</string>
+    <string name="login_name">Ingrese su nombre</string>
+    <string name="login_email">Ingrese el correo</string>
+    <string name="login_password">Ingrese la contraseña</string>
+    <string name="login_submit">Iniciar sesion</string>
+    <string name="todo">TODO</string>
+
+    <string name="menu_title">Opciones</string>
+    <string name="menu_btn_products">PRODUCTOS</string>
+    <string name="menu_btn_quoter">Cotizador</string>
+    <string name="menu_finish_app">Salir</string>
+
+    <string name="prod_title">Productos disponibles</string>
+    <string name="prod_code">CODIGO: </string>
+    <string name="prod_desc">DESCRIPCION: </string>
+    <string name="prod_brand">MARCA: </string>
+    <string name="prod_stock">STOCK: </string>
+    <string name="prod_unit_price">PRECIO UNIDAD: </string>
+    <string name="prod_dozen_price">PRECIO DOCENA: </string>
+
+    <string name="client_name">Nombre del cliente</string>
+    <string name="client_ced">Cedula</string>
+    <string name="client_email">Correo electronico</string>
+    <string name="client_tel">Telefono</string>
+    <string name="client_dir">Direccion</string>
+
+
+
+</resources>
