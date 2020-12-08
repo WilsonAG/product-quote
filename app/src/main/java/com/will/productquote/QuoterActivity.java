@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.will.productquote.model.Product;
 
@@ -54,10 +55,14 @@ public class QuoterActivity extends AppCompatActivity implements AdapterView.OnI
     }
 
     private void computePayment(View v) {
-        int quantity = Integer.parseInt(this.quantity.getText().toString());
-        if (this.productSelected != null) {
-            double total = quantity * this.productSelected.getUnitPrice();
-            this.total.setText("$ "+total);
+        try {
+            int quantity = Integer.parseInt(this.quantity.getText().toString());
+            if (this.productSelected != null ) {
+                double total = quantity * this.productSelected.getUnitPrice();
+                this.total.setText("$ "+total);
+            }
+        }catch (Exception ex){
+            Toast.makeText(this, "Complete los campos", Toast.LENGTH_SHORT).show();
         }
     }
 
