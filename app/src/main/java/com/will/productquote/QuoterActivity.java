@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -46,6 +47,18 @@ public class QuoterActivity extends AppCompatActivity implements AdapterView.OnI
         prodList.setAdapter(adapter);
 
         prodList.setOnItemSelectedListener(this);
+
+        Button compute = findViewById(R.id.btn_compute);
+
+        compute.setOnClickListener(this::computePayment);
+    }
+
+    private void computePayment(View v) {
+        int quantity = Integer.parseInt(this.quantity.getText().toString());
+        if (this.productSelected != null) {
+            double total = quantity * this.productSelected.getUnitPrice();
+            this.total.setText("$ "+total);
+        }
     }
 
     @Override
